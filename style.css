@@ -261,6 +261,7 @@ a {
   padding: 2em;
   grid-row: 1 / span 5;
   padding-bottom: 7em;
+  max-width: 70ch;
 }
 
 .aboutMe h2 {
@@ -289,6 +290,7 @@ a {
   color: white;
   position: relative;
   top: -1em;
+  max-width: 59ch;
 }
 
 .cost h2 {
@@ -428,6 +430,7 @@ main .form:hover, .form:focus {
   z-index: 11;
   outline-offset: -1em;
   padding: 2em 4em 3em 2em;
+  max-width: 50ch;
 }
 
 #pride {
@@ -442,7 +445,7 @@ main .form:hover, .form:focus {
   margin-left: 1em;
 }
 footer {
-  grid-column: 1 / -1;
+  grid-column: 4 / span 1;
   /*! display: grid; */
   /*! grid-template-columns: 1em 1fr 1fr repeat(3, minmax(10ch, 24.66ch)) 1fr 1fr 1em; */;
   /*! justify-content: center; */
