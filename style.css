@@ -11,7 +11,7 @@
 
 
 body {
-  font-family: 'GlacialIndifferenceRegular', 'NowRegular', 'AaarghNormal', 'LinearRegular', 'Avant Garde', 'Geneva', 'Trebuchet MS', 'helvetica', sans-serif;
+  font-family: 'GlacialIndifferenceRegular', 'AaarghNormal', 'Geneva', 'helvetica', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
    font-weight: normal;
    font-style: normal;
    /*    font-size: 1.2em;   */
@@ -171,7 +171,7 @@ img {
 
 h2 {
   font-size: 2em;
-  font-family: 'MontserratRegular', 'RoundoRegular', 'FengardoNeueRegular', 'AvdiraRegular', 'GardinerRegular', 'ExTrast9Regular', 'LSRegular', 'RalewayDotsRegular', 'GardinerRegular', 'MopsMedium', 'ArchitectsDaughterRegular', 'AaarghNormal', 'UniqueRegular';
+  font-family: 'MontserratRegular', 'AaarghNormal', 'GlacialIndifferenceRegular', 'Geneva', 'helvetica', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
    font-weight: normal;
    font-style: normal;
 }
@@ -185,13 +185,20 @@ h2 {
 
 #easy {
   text-align: center;
+  grid-column: 1 / -1;
 }
 
 .main a {
   padding: 1em 0;
   transition: 190ms;
+  text-decoration-line: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
   text-decoration: solid underline var(--primary) auto;
+
   text-underline-offset: auto;
+  grid-column: 4 / -4;
 }
 
 p {
@@ -222,8 +229,11 @@ a {
 
 .main a:hover, a:focus {
   color: inherit;
-  text-decoration: solid underline var(--primary) 0.4em;
+  text-decoration-line: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-style: solid;
   text-decoration-thickness: 0.4em;
+  text-decoration: solid underline var(--primary) 0.4em;
   transition: all 200ms;
   text-underline-offset: 0.5em;
   text-decoration-skip-ink: none;
@@ -232,14 +242,25 @@ a {
 .start a:hover, a:focus{
   font-size: 2em;
   transition: all 200ms ease-in-out;
+  padding-top: 0;
+  /*   padding-bottom: 0;  */
+  margin-bottom: -3em;
 }
 
-.cost .start a {
+.start {
+    transition: all 4s ease-in-out, text-decoration-thickness 200ms 2s;
+}
+.start a {
   transition: all 4s ease-in-out, text-decoration-thickness 200ms 2s;
-  text-decoration: solid underline var(--primary) auto;
+  text-decoration-line: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-style: solid;
   text-decoration-thickness: auto;
+  text-decoration: solid underline var(--primary) auto;
   text-underline-offset: 0.2em;
   text-decoration-skip-ink: none;
+  /*   padding-top: 2em;  */
+
 }
 
 .grid .main h2 a {
@@ -318,20 +339,30 @@ a {
 
 .cost a {
   color: var(--secondary);
+  text-decoration-line: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
   text-decoration: solid underline var(--primary) auto;
   text-underline-offset: .2em;
 }
 
 a.hidden {
   color: inherit;
+  text-decoration-line: none;
+  text-decoration-color: none;
+  text-decoration-style: none;
   text-decoration: none;
   transition: 3s;
   padding: .7em .25em 0 0;
 }
 
 a.hidden:hover, a.hidden:focus {
-
-  text-decoration: underline  var(--primary) .4em;
+  text-decoration-line: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-style: solid;
+  text-decoration-thickness: 0.4em;
+  text-decoration: underline  var(--primary) 0.4em;
   background: var(--primary);
   text-underline-offset: 0 ;
   transition: .1s ease-in-out;
@@ -341,6 +372,8 @@ a.hidden:hover, a.hidden:focus {
 main .form:hover, .form:focus {
   text-underline-offset: 0.3rem;
 }
+
+
 
 .p {
   transition: 5s;
@@ -444,35 +477,42 @@ main .form:hover, .form:focus {
   /*! grid: ; */
   margin-left: 1em;
 }
+
 footer {
   grid-column: 4 / span 1;
-  /*! display: grid; */
-  /*! grid-template-columns: 1em 1fr 1fr repeat(3, minmax(10ch, 24.66ch)) 1fr 1fr 1em; */;
-  /*! justify-content: center; */
   height: 8em;
   grid-row: 6 / span 1;
   padding: 2em 1em 1em 2em;
-  /*! grid-template-rows: auto 1em 1em 1em; */
 }
 
 a.amazing {
   grid-column: 1 / -1;
   text-align: center;
   padding: 8em 0 15em;
-  transition: all 3s, color 200ms, font-size 5s ease-in-out ;
+  transition: all 3s, color 200ms, font-size 5s ease-in-out, padding 5s ease-in-out;
+  text-decoration-line: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
   text-decoration: solid underline var(--primary) auto;
   text-underline-offset: auto;
+    padding: 4em 0 6em 0;
 }
 
 a.amazing:hover, a.amazing:focus {
   color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-style: solid;
+  text-decoration-thickness: 0.4em;
   text-decoration: solid underline var(--primary) 0.4em;
   text-decoration-thickness: 0.4em;
   transition: all 200ms;
   text-underline-offset: 0.5em;
   text-decoration-skip-ink: none;
     font-size: 1.5em;
-    transition: text-decoration 200ms, font-size 5s ease-in-out 1.5s;
+    transition: text-decoration 200ms, font-size 5s ease-in-out 1.5s, padding 5s ease-in-out 1.5s;
+    padding: 3em 0 3em 0;
 }
 
 .inclusion {
@@ -499,7 +539,7 @@ a.amazing:hover, a.amazing:focus {
 .amazing {
   grid-column: 1 / -1;
   text-align: center;
-  padding: 4em 0 6em 0;
+
 }
 
 .inside {
@@ -519,27 +559,6 @@ footer p {
 }
 
 .spaced {
-  /*
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;  */
-
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 6em 1em;
@@ -586,7 +605,9 @@ footer p {
 
 
 
-
+.hosting span {
+  display: block;
+}
 
 
 
@@ -628,7 +649,7 @@ footer p {
     padding: 1em 2em;
     color: white;
     height: auto;
-    padding-bottom: 3em;
+    padding-bottom: 8em;
   }
   .cost h2, .strong {
     line-height: 1;
@@ -654,6 +675,29 @@ footer p {
     padding-bottom: .5em;
   }
 
+  .hosting {
+    position: relative;
+    top: 0em;
+    padding-bottom: 2em;
+    border-bottom-left-radius: 50px;
+    border-left: solid var(--primary) .5em;
+    border-top-left-radius: 0;
+    position: relative;
+    border-left: 50%;
+    top: padd;
+    padding: 4em 1.5em 4em 1.5em;
+  }
+  .hosting span {
+    display: inline;
+  }
+  footer {
+    padding: 2em 0 1em 0;
+    grid-column: 2 / -2;
+    padding: 2em 0 1em 0;
+  }
+  footer span {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 39em) {
@@ -671,3 +715,93 @@ footer p {
   }
 
 }
+
+
+
+
+
+
+
+
+/* BROWSER SPECIFIC */
+
+/*
+
+/* Chrome version 29 and above
+@media screen and (-webkit-min-device-pixel-ratio:0)
+and (min-resolution:.001dpcm) {
+  .hosting {
+    outline: none;
+    border-left: solid var(--primary) 2px;
+    border-bottom: solid var(--primary) 2px;
+    box-shadow: inset .5em .5em navy, inset -.5em -.5em navy;
+  }
+}
+
+/* Chrome version 22-28
+@media screen and(-webkit-min-device-pixel-ratio:0) {
+  .hosting {
+    -chrome-:only (;
+      outline: none;
+      border-left: solid var(--primary) 2px;
+      border-bottom: solid var(--primary) 2px;
+    );
+  }
+}
+
+/* Chrome, Safari, and also the Edge Browser and Firefox
+@media and (-webkit-min-device-pixel-ratio:0) {
+  .hosting {
+    outline: none;
+    border-left: solid var(--primary) 1px;
+    border-bottom: solid var(--primary) 1px;
+  }
+}
+
+
+
+
+/* EDGE
+@supports (-ms-ime-align:auto) {
+  .hosting {
+    outline: none;
+    border-left: solid var(--primary) 1px;
+    border-bottom: solid var(--primary) 1px;
+  }
+}
+
+
+
+
+/* Safari 11+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+  .hosting {
+    outline: none;
+    border-left: solid var(--primary) 1px;
+    border-bottom: solid var(--primary) 1px;
+  }
+}}
+/* Test website on real Safari 11+ */
+
+/* Safari 10.1
+@media not all and (min-resolution:.001dpcm){
+@supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+  .hosting {
+    outline: none;
+    border-left: solid var(--primary) 1px;
+    border-bottom: solid var(--primary) 1px;
+  }
+}}
+
+/* Safari 6.1-10.0 (but not 10.1)
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0){
+@media {
+  .hosting {
+    outline: none;
+    border-left: solid var(--primary) 1px;
+    border-bottom: solid var(--primary) 1px;
+  }
+}}
+
+*/
