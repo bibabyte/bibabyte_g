@@ -397,58 +397,6 @@ main .form:hover, .form:focus {
   height: 1em;
 }
 
-/*
-
-.triangle {
-  background: var(--primary);
-  z-index: 10;
-  position: relative;
-  height: 100%;
-  display: inline-block;
-  width: 100%;
-        animation: 20s 3 motion;
-
-
-
-      clip-path: polygon(143px 13px, 7px 202px, 235px 220px);
-
-
-}
-
-
-.background {
-  background: navy;
-  width: 100%;
-  height: 14em;
-  display: inline-block;
-}
-.background p {
-  padding: 0;
-  float: left;
-  display: block;
-  position: relative;
-  color: var(--primary);
-}
-
-#cost {
- top: -90%;
- left: -6%;
-}
-#quality{
- top: -70%;
- right: -70%;
-}
-#time{
-  bottom: 10%;
-}
-#scope {
-    color: navy;
-    top: 55%;
-    right: -36%;
-    font-size: .9em;
-}
-
-*/
 
 
 .hosting {
@@ -467,14 +415,9 @@ main .form:hover, .form:focus {
 }
 
 #pride {
-  /*! transform: rotate(90deg); */
   height: 8em;
   position: relative;
-  /*! bottom: -0.em; */
-  /*! right: 0em; */
   float: right;
-    /*! clip-path: polygon(143px 13px, 7px 202px, 235px 220px); */
-  /*! grid: ; */
   margin-left: 1em;
 }
 
@@ -567,44 +510,6 @@ footer p {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ANIMATION */
-
-/*
-@keyframes motion {
-    from {
-      clip-path: polygon(66px 18px, 5px 106px, 235px 220px);
-    }
-    25% {
-      clip-path: polygon(143px 13px, 7px 202px, 235px 220px);
-    }
-    50% {
-      clip-path: polygon(110px 106px, 80px 168px, 135px 170px);
-    }
-    75% {
-      clip-path: polygon(187px 8px, 4px 215px, 210px 194px);
-    }
-    to {
-      clip-path: polygon(66px 18px, 5px 106px, 235px 220px);
-    }
-}*/
-
-
-
 .hosting span {
   display: block;
 }
@@ -643,13 +548,14 @@ footer p {
   }
   .cost {
     background: navy;
-    grid-column: 1 / span 5;
+    grid-column: 1 / -1;
     grid-row: 5 / span 6;
     z-index: 3;
     padding: 1em 2em;
     color: white;
     height: auto;
     padding-bottom: 8em;
+
   }
   .cost h2, .strong {
     line-height: 1;
@@ -658,16 +564,29 @@ footer p {
     display: none;
   }
 
-  .pic_narrow {
+.pic_narrow {
     visibility: visible;
-    width: 76%;
+    width: 68%;
+    justify-self: flex-end;
+    display: block;
+    float: right;
+    /*! shape-outside: polygon(30.11% 44.21%, 33.2% 55.55%, 24.51% 55.41%, 20.81% 59.49%, 16.83% 69.39%, 10.81% 77.67%, 5.63% 86.82%, -1.71% 101.01%, 97.48% 99.91%, 97.6% 83.31%, 98.32% 66.94%, 89.26% 61.09%, 78.14% 54.25%, 81.65% 47.23%, 75.08% 38.96%, 72.78% 10.79%, 63.04% 1.06%, 43.24% 4.06%, 29.1% 14.02%, 25.8% 29.53%); */
+    position: relative;
+    right: 0.8em;
+    bottom: 12em;
+  }
+.pic_nar {
+    visibility: visible;
+    width: 60%;
     justify-self: flex-end;
     display: block;
     float: right;
     shape-outside: polygon(30.11% 44.21%, 33.2% 55.55%, 24.51% 55.41%, 20.81% 59.49%, 16.83% 69.39%, 10.81% 77.67%, 5.63% 86.82%, -1.71% 101.01%, 97.48% 99.91%, 97.6% 83.31%, 98.32% 66.94%, 89.26% 61.09%, 78.14% 54.25%, 81.65% 47.23%, 75.08% 38.96%, 72.78% 10.79%, 63.04% 1.06%, 43.24% 4.06%, 29.1% 14.02%, 25.8% 29.53%);
     position: relative;
     right: -3.2em;
+    bottom: 1em;
   }
+
   span.bio {
     text-align: center;
     display: inherit;
@@ -686,6 +605,7 @@ footer p {
     border-left: 50%;
     top: padd;
     padding: 4em 1.5em 4em 1.5em;
+    grid-column: 1/ -1;
   }
   .hosting span {
     display: inline;
