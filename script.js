@@ -2,10 +2,12 @@
 $(window).scroll(function(){
   $('.web').addClass('headMov');
   $('.design').addClass('headMov');
+  $('.logo_head').removeClass('logo_hid');
 
   $(document).off('scroll');
-  // $('.header').removeClass('.headMov');
-  $('.header').addClass('headMov2');
+
+$('.header').addClass('headMov2');
+
 
   setTimeout(() => {
 
@@ -13,15 +15,6 @@ $(window).scroll(function(){
     $('.design').addClass('headMov2').fadeIn(1000);
   }, 1500);
 
-
-  // $('.header').addClass('headMov').delay(50000);
-
-
-
-  /*
-$('.headMov').addEventListener('transitionend', function() {
-              $('#header_nav').addClass('headMov');
-            }); */
 
 
 
