@@ -7,6 +7,16 @@
   --primary: #DA1884;
   --secondary: #F7B9DB;
   --textColor: black;
+
+  --nav-size: 12vh;
+  --nav-height-open: 40vh;
+  --bg-menu: #203040;
+  --bg-hover: #405060;
+}
+
+@keyframes item-fade-in {
+  0% { opacity: 0; }
+  100% { flex: 1; opacity: 1; }
 }
 
 
@@ -33,12 +43,14 @@ body {
   grid-template-rows: 3vh auto auto auto;
   position: sticky;
   top: 0;
-  background: linear-gradient(#fff 95%, 98%, #ffffff00 100%);
+  background: white;
+  background: linear-gradient(#fff 95%, 98%, #ffffff00 100%); 
   max-height: 60em;
   grid-column: 1 / -1;
   justify-content: flex-end;
   z-index: 100;
   transition: all 2s;
+
 }
 
 .header.headMov {
@@ -47,6 +59,68 @@ body {
 
 .header.headMov2 {
 }
+
+nav:hover {
+  background-color: white;
+  transition: 120ms background-color linear;
+}
+
+nav:nth-child(1):hover, nav:nth-child(2):hover {
+  /* height: var(--nav-height-open); */
+  transition: 120ms background-color linear, 240ms height linear;
+}
+
+nav > li { 
+  height: 0;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 240ms background-color linear;
+  font-size: 1.2em;
+  cursor: default;
+}
+
+nav:hover > li {
+  animation: 240ms item-fade-in linear forwards;
+  animation-delay: 120ms;
+  transition: 120ms background-color linear;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline;
+}
+
+nav a {
+  border: 1px solid #DA1884;
+  border-radius: 3px;
+  padding: .1em 1em;
+  text-decoration: none;
+}
+/* menu {
+  grid-column: 4 / span 1;
+  grid-row: 4 / span 1;
+  position: relative;
+  top: -2.5em;
+  
+}
+
+menu li {
+  list-style-type: none;
+  display: inline;
+
+}
+
+menu a {
+  border: 1px solid #DA1884;
+  border-radius: 3px;
+  padding: .1em 1em;
+  text-decoration: none;
+} */
+
+
+
 
 .flex {
  grid-column: 4;
@@ -111,16 +185,6 @@ ul {
 .headMov2 {
   max-height: 5em;
 }
-
-/*
-#header_nav.headMov{
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1em;
-  transition: display 1s ease-in-out 4s;
-}*/
-
-
 
 .web.headMov {
   max-height: 4em;
@@ -432,8 +496,6 @@ main .form:hover, .form:focus {
   height: 1em;
 }
 
-
-
 .hosting {
   background: white;
   box-shadow: 0 -.25em 0 .5em var(--primary);
@@ -706,4 +768,11 @@ footer p {
   footer span {
     display: block;
   }
+}
+header nav a:hover, a:focus, a:active {
+  background: var(--secondary);
+  transition: all .2s ease;
+  text-decoration: none;
+  font-size: 1em;
+  color: var(--primary);
 }

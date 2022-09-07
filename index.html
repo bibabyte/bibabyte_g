@@ -23,23 +23,28 @@
 
 </head>
 
-<body>
-<div class="grid all" id="all">
-  <div class="grid header" id="header_nav">
-		<b class="flex">
-		<img class="logo_head logo_hid" src="img/BibaByte.png" alt="BibaByte">
-		</b>
+<body class="grid all" id="all">
+
+  <header class="grid header" >
+		<nav class="flex">
+			<header id="menu"><img class="logo_head logo_hid" src="img/BibaByte.png" alt="BibaByte"></header>
+				<li><a href="#main" target="_self">Main</a></li>
+				<li><a href="#bio">About</a></li>
+				<li><a href="#cost">Cost</a></li>
+				<li><a href="https://bibabyte.github.io/">Portfolio</a></li>
+		</nav>
 		<img class="web" src="img/web2.png" alt="Web">
 		<img class="design" src="img/Designer.png" alt="Designer">
+		<br>
+		<!-- <menu class="logo_head logo_hid">
+			<li><a href="#main" target="_self">Main</a></li>
+			<li><a href="#bio">About</a></li>
+			<li><a href="#cost">Cost</a></li>
+			<li><a href="https://bibabyte.github.io/">Portfolio</a></li>
+		</menu> -->
+	</header>
 
-    <!--
-<li class="web">  </li>
-    <li class="design">  </li>-->
-
-
-  </div>
-
-  <ul class="grid main">
+  <ul class="grid main" id="main">
     <li id="hi"> <h2>Oh hi! &#x1F600;</h2> </li>
     <li id="see"> <h2>&#x1F929; It's nice to <span>see you here.</span></h2> </li>
     <li class="p"> <p>You're in the right place for an awesome website to showcase your amazing <span class="artwork">artwork</span>.</p>
@@ -55,7 +60,7 @@
     <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdeFGhU-yK24zApYQxKlLki2bclLLHYG-nyOf9qKXhN-4yqIw/viewform?usp=sf_link"><li id="easy"> <h2> Pretty easy right?	</h2> </li></a>
   </ul>
 
-  <div class="grid bio">
+  <div class="grid bio" id="bio">
 		<div class="aboutMe">
     <h2>About BibaByte</h2>
   	<p class="center strong">We are Biba & Joseph <span class="bio">We code websites.</span></p>
@@ -72,7 +77,7 @@
 	</div>
 
 
-	<div class="cost">
+	<div class="cost" id="cost">
 		<h2>But how much will it cost?? &#x1F928;</h2>
 			<p class="center strong">Websites start at $300!</p>
 			<p>A $300 website is simple but uniquely yours. We'll work together to fit everything we can into the project.</p>
@@ -142,7 +147,7 @@
 
 	</footer>
 
-</div>
+
 
 
 <script type="text/javascript" src="script.js">  </script>
